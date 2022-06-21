@@ -1,0 +1,23 @@
+
+{
+   "kind":"Service",
+   "apiVersion":"v1",
+   "metadata":{
+      "name":"eks-deployment",
+      "labels":{
+         "app":"eks-deployment"
+      }
+   },
+   "spec":{
+      "ports": [
+         {
+           "port":8000,
+           "targetPort":80
+         }
+      ],
+      "selector":{
+         "app":"eks-deployment"
+      },
+      "type": "LoadBalancer"
+   }
+}
