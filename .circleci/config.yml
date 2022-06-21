@@ -78,8 +78,6 @@ jobs:
               kubectl apply -f eks-deployment.json
               kubectl apply -f eks-service.json
               echo "---------------------------------------deploy-eks-to-cluster------------------------------"
-              kubectl get all -n eks-deployment
-              kubectl -n eks-deployment describe service eks-deployment
               echo "---------------------------------------------DONE-----------------------------------------"
 workflows:
   default:
