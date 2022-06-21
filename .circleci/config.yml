@@ -75,8 +75,8 @@ jobs:
               echo "-------------------------------------pull-docker-update-config----------------------------"
               # kubectl port-forward 8080:80
               kubectl create namespace eks-deployment
-              kubectl apply -f eks-deployment.yaml
-              kubectl apply -f eks-service.yaml
+              kubectl apply -f eks-deployment.json
+              kubectl apply -f eks-service.json
               echo "---------------------------------------deploy-eks-to-cluster------------------------------"
               kubectl get all -n eks-deployment
               kubectl -n eks-deployment describe service eks-deployment
